@@ -1,0 +1,62 @@
+{% block content %}
+<style type="text/css">
+  body{
+
+    }
+.form-container {
+ 
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    padding:2%;
+    border: 1px solid #888;
+    width:50%; 
+     background-color:#E8F8F5 /* Could be more or less, depending on screen size */
+
+}
+
+.form-container input[type=text], .form-container input[type=Date] {
+   width: 30%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+.form-container input[type=text]:focus, .form-container input[type=tel]:focus,.form-container input[type=email]:focus,.form-container input[type=date]:focus,.form-container input[type=textarea]:focus{
+  background-color: #ddd;
+  outline: none;
+}
+
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 3%;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  margin-bottom:10px;
+  opacity: 0.8;
+  
+}
+.x{
+  color:#2F4F4F;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 20px;
+}
+</style>
+<body>
+<div class="form-popup" id="myForm">
+	<form class="form-container">
+        <div><p class="x">{{c_no}}</p></div>
+        <div><p class="x">{{fname}}</p></div>
+        <div><p class="x">{{lname}}</p></div>
+        <div><p class="x">{{gender}}</p></div>
+        <div><p class="x">{{date}}</p></div>
+        <div><p class="x">{{mail}}</p></div>
+        <div><p class="x">{{pno}}</p></div>
+        <div><p class="x">{{add}}</p></div>
+        <div><p class="x">{{desc}}</p></div>
+        <div><p class="x">{{status}}</p></div>
+        </form>
+        </div>
+        <body>
+        
+{% endblock %}

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Page</title>
+	<style type="text/css">
+	body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+body{
+
+    background-color:#F5DEB3;
+  
+    
+}
+.h1{
+  color:#008080;
+  text-transform: uppercase;
+  font-size: 40px;
+  font-family: "Times New Roman", Times, serif;
+}
+.h2{
+  color:#008080;
+
+}
+.complaint{
+  background-color:#008080;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  text-decoration: none;
+}
+.status{
+
+  background-color:#008080;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.mybtn{
+  background-color: #008080;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  text-decoration: none;
+  text-decoration: none;
+}
+.special{
+  background-color:#008080;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  text-decoration: none;
+}
+.report{
+  background-color: #008080;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  text-decoration: none;
+}
+.records{
+  background-color: #008080;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  text-decoration: none;
+}
+.contacts{
+  background-color: #008080;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.a{ 
+  color:black;
+  font-family:arial;
+  font-size:75px;
+  text-decoration: none;
+
+}
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: #008080;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+  text-decoration: none;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+img {
+    animation: blink 3s;
+    animation-iteration-count: infinite;
+}
+.mySlides {
+   position: relative;
+    float: left;
+    width:300px;
+    height:350px;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+}
+.slides{
+  position: relative;
+    float: right;
+    width:300px;
+    height:350px;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+}
+
+
+.slideshow {
+  flex: 50%;
+  padding: 0 4px;
+  
+}
+.slideshow img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+} 
+* {
+    box-sizing: border-box;
+}
+
+
+</style>
+
+
+</head>
+<body>
+	<h1 class="h1" class="a" align="center">Crime Station</h1>
+	<form align="center">
+	<button class="complaint" ><a class="complaint" href="/crimemanagement/complaint1/">File a Complaint</a></button>
+	<button class="status" ><a class="status" href="/crimemanagement/complaint_status/">Complaint Status</a></button>
+	<button class="special"><a class="special" href="/crimemanagement/helplines/">Helplines</a></button>
+  <button class="contacts"><a class="contacts" href="/crimemanagement/contacts/">Contact Us</a></button>
+	
+<div class="grid-container"> 
+  <div class="slideshow">
+  <h2 class="h2" align="center">WANTED</h2>
+    
+    <img class="mySlides" src="https://media.phillyvoice.com/media/images/Montco_Most_Wanted.4091b063.fill-735x490.png" style="width:30%" style="height:30%" >
+  <img class="mySlides" src="https://mediaweb.wftv.com/photo/2017/04/13/GUSTAVO%20FALCON%20fs_20170413115413804_7770442_ver1.0_640_360.jpg" style="width:30%" style="height:30%">
+  <img class="mySlides" src="https://cdn20.patchcdn.com/users/22848544/20180706/024819/styles/T800x600/public/processed_images/36673901_10156581716114679_7628476351422398464_o-1530902895-8767.jpg" style="width:30%" style="height:30%">
+  <img class="mySlides" src="https://static.businessinsider.sg/sites/2/2017/06/5766bb859105844d018ca1d6.jpg" style="width:30%" style="height:30%">
+</div>
+<div class="slideshow">
+  <h2 class="h2" align="center">MISSING</h2>
+    <img class="mySlides" src="https://www.datocms-assets.com/4857/1523077836-modiano.jpg" style="height:30%" >
+     <img class="mySlides" src="https://i.pinimg.com/236x/5a/1d/f6/5a1df64fd08d80b226091ca974ddefc8--an-year-year-old.jpg" style="height:30%" >
+      <img class="mySlides" src="http://randersidag.dk/nonsec/NPIX/2016/1/NAVNE_Peter_Juul_Svendsen_butikschef_thansen_450.jpg" style="height:30%" >
+       <img class="mySlides" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjOaMf52vSfTucJKBJ3q-KRsZpxUdbzMrvPJeAgTP1HSGnZasSUg" style="height:30%" >
+  </div>
+
+
+</div>
+</body>
+</html>
+
+
+
+
+

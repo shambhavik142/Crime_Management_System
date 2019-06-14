@@ -1,0 +1,47 @@
+{% block content %}
+<style type="text/css">
+
+.x{
+    color:#008080;
+}
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 3%;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  margin-bottom:10px;
+  opacity: 0.8;
+  
+}
+.form-container input[type=text]:focus, .form-container input[type=tel]:focus,.form-container input[type=email]:focus,.form-container input[type=date]:focus,.form-container input[type=textarea]:focus{
+  background-color: #ddd;
+  outline: none;
+}
+.form-container input[type=text], .form-container input[type=Date] {
+   width: 30%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+.form-container {
+ 
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    padding:2%;
+    border: 1px solid #888;
+    width:50%; 
+     background-color:#E8F8F5 /* Could be more or less, depending on screen size */
+
+}
+</style>
+<body>
+<form class="form-container" method="post" action="/crimemanagement/view_status/">
+     {% csrf_token %}
+	<label class="x" for="comp_no"><b>Enter Complaint Number:</b></label>
+    <input class="x" name="comp_no" id="Complaintno" type="text" placeholder="Enter Complaint Number" required>
+    <div align="center"><button type="submit" class="btn">View Status</button></div>
+    </form>
+    </body>
+{% endblock %}

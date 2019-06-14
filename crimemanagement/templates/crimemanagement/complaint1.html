@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>complaint</title>
+	<style type="text/css">
+  body{
+  
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+* {box-sizing: border-box;}
+
+	.form-popup {
+
+     
+    overflow: auto; /* Enable scroll if needed */
+  border: 3px solid #f1f1f1;
+    padding-top: 50px;
+    color:#008080;
+    
+  
+}
+.x{
+  color:#008080;
+}
+
+.form-container {
+ 
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    padding:2%;
+    border: 1px solid #888;
+    width:50%; 
+     background-color:#E8F8F5 /* Could be more or less, depending on screen size */
+
+}
+ #email{
+  width: 30%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+ }
+ #phone_number{
+  width: 30%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  }
+
+#subject{
+  width: 50%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  }
+ 
+.form-container input[type=text], .form-container input[type=Date] {
+   width: 30%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+.form-container input[type=text]:focus, .form-container input[type=tel]:focus,.form-container input[type=email]:focus,.form-container input[type=date]:focus,.form-container input[type=textarea]:focus{
+  background-color: #ddd;
+  outline: none;
+}
+
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 3%;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  margin-bottom:10px;
+  opacity: 0.8;
+  
+}
+</style>
+
+</head>
+<body>
+	<div class="form-popup" id="myForm">
+	<form class="form-container" method="post" action="/crimemanagement/complaint_info/">
+  {% csrf_token %}
+    <h1 align="center">Complaint Forum</h1>
+    <label class="x" for="Firstname"><b>First Name:</b></label>
+    <input id="firstname" name="fname" type="text" placeholder="Enter Firstname" required>
+    <label class="x" for="lastname"><b>Last Name:</b></label>
+    <input id="lastname" name="lname" type="text" placeholder="Enter Lastname" required>
+   
+   <div><label class="x"><b>Gender:</b>
+			<select name="gender">
+				<option>Female</option>
+				<option>Male</option>
+				<option>Other</option>
+			</select>
+		    </label>
+			<label class="x" for="Date"><b>Date:</b></label>
+			<input id="Date" name="date" type="date"  id="date">
+		</div>
+	 <label class="x" for="email"><b>Email:</b></label>
+     <input id="email" name="email" type="email" placeholder="Enter Email" name="email" required>
+    <label class="x" for="phone_number"><b>Phone Number:</b></label>
+    <input id="phone_number" name="p_no" type="tel" placeholder="Phone Number" required>
+    <div><label class="x" for="add"><b>Address:</b></label>
+    <input id="add" name="address" type="text" placeholder="Write Your Address Here" required></div>
+	<labelclass="x"  for="subject"><b>Complaint Box:</b></label>
+        <textarea id="subject"  type="textarea" name="subject" placeholder="Write Your Complaint Here" style="height:170px"></textarea>	
+        
+   <div align="center"><button type="submit" class="btn">submit</button></div>
+   </form>
+
+</body>
+</html>

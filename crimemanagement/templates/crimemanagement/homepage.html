@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home Page</title>
+	<style type="text/css">
+		body{
+    background-color:#F5DEB3;
+  }
+		h1{
+			font-size:50px;
+			text-align: center;
+		}
+		.center{
+			display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width:15%;
+		}
+		h2
+		{
+			font-size: 35px;
+		}
+	
+
+* {
+    box-sizing: border-box;
+}
+.column {
+    float: left;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+}
+
+.left {
+  width: 55%;
+}
+
+.right {
+  width: 45%;
+}
+
+.row:after {
+	
+	content: "";
+    display: table;
+    clear: both;
+}
+#Username
+{
+	width: 30%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+#password{
+	width: 30%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  
+}
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 3%;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  margin-bottom:10px;
+  opacity: 0.8;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+</style>
+</head>
+<body>
+	<h1>Welcome To Bangalore City Crime Management Center</h1>
+	<img src="http://www.networkedindia.com/wp-content/uploads/bengaluru-police.jpg" class="center">
+	<div class="row">
+  <div class="column left">
+		<h2>Benguluru City Police</h2>
+
+	<p>Benguluru city is the capital of the State of Karnataka. Founded in the 16th century, this City was ruled by the great dynasties of Kadambas, Hoysalas and Vijayanagar Kings. </p>
+
+	<p>City Police is responsible for the overall policing in the city and has been providing excellent service with well-established community participation in crime prevention, maintenance of law and order and traffic management.</p>
+
+	<p>The City Police has a network of beats manned by foot patrol and vehicle patrol during day and night. These are backed by special mobile patrol units called Hoysala, traffic patrol and a number of armed striking force mobile units stationed in strategic areas.</p>
+
+    <p >The jurisdiction of the City Police has been divided into 8 zones - East, West, South, North, Central, South East, North East and Whitefield. Each zone is headed by an Officer of the rank of Deputy Commissioner of Police. Each zone is sub-divided into sub-divisions headed by Assistant Commissioners of Police which are further divided into Police Stations under the charge of an Officer of the rank of Police Inspector.</p>
+
+    <p>Assistant Commissioners of Police are the first line supervisory officers who supervise the working of the Police stations in their jurisdictions and report to their respective Deputy Commissioners of Police.</p>
+</div>
+<div class="column right" align="center">
+	
+	<h2>Login</h2>
+	<form method="post" action="/crimemanagement/police/">
+     {% csrf_token %}
+	<label for="Username"><b>Username:</b></label>
+    <input name="Username" id="Username" type="text" placeholder="Enter Username" required>
+    <label for="password"><b>Password:</b></label>
+    <input name="password" id="password" type="password" placeholder="Enter Password" required>
+    <div align="center"><button type="submit" class="btn">Submit</button></div>
+</form>
+<form>
+    <div align="center"><button type="submit" class="btn"><a class="btn" href="/crimemanagement/user/">Continue as a user</a></button></div>
+</form>
+</div>
+</div>
+</body>
+</html>
